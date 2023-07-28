@@ -47,6 +47,15 @@ you define the array, like this:
 
 char name[80] = "Italy"; // Leaves lots of extra room
 
+int ages[]; // Incorrect
+
+
+int ages[3];
+for (i = 0; i < 3; i++)
+{
+printf("What is the age of child #%d? ", i+1);
+scanf(" %d", &ages[i]); // Gets next age from user
+}
 
 
 */

@@ -14,17 +14,17 @@ During each pass, the lower values “float” to the top of the array
 main()
 {
     int ctr, inner, outer, didSwap, temp;
-    int nums[10];
-    time_t t;
+    int nums[10] = {5, 2, 1, 3, 4, 8, 9, 7, 6, 8};
+    // time_t t;
     // If you don't include this statement, your program will always
     // generate the same 10 random numbers
-    srand(time(&t));
+    // srand(time(&t));
     // The first step is to fill the array with random numbers
     // (from 1 to 100)
-    for (ctr = 0; ctr < 10; ctr++)
-    {
-        nums[ctr] = (rand() % 99) + 1;
-    }
+    /* for (ctr = 0; ctr < 10; ctr++)
+     {
+         nums[ctr] = (rand() % 99) + 1;
+     }*/
     // Now list the array as it currently is before sorting
     puts("\nHere is the list before the sort:");
     for (ctr = 0; ctr < 10; ctr++)
@@ -35,14 +35,14 @@ main()
     for (outer = 0; outer < 9; outer++)
     {
         didSwap = 0; // Becomes 1 (true) if list is not yet ordered
-        for (inner = outer; inner < 10; inner++)
+        for (inner = 0; inner < 10; inner++)
         {
-            if (nums[inner] < nums[outer])
+            if (nums[inner + 1] < nums[inner])
             {
 
                 temp = nums[inner];
-                nums[inner] = nums[outer];
-                nums[outer] = temp;
+                nums[inner] = nums[inner + 1];
+                nums[inner + 1] = temp;
                 didSwap = 1;
             }
         }
@@ -59,6 +59,7 @@ main()
     }
     return (0);
 }
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -118,4 +118,5 @@ void modifyValueByReference(int *ptr)
 
 By passing the variable by reference, we can directly modify its value in the modifyValueByReference function, and this change is reflected in the original variable num in the main function. After calling modifyValueByReference, the value of num in the main function becomes 10.
 
-Passing variables by reference is useful when you want a function to modify the original variable's value, and you don't want to make a copy of the variable. This is often used when you need to pass large data structures to functions efficiently, as it avoids the overhead of copying the entire data structure.*/
+Passing variables by reference is useful when you want a function to modify the original variable's value, and you don't want to make a copy of the variable. This is often used when you need to pass large data structures to functions efficiently, as it avoids the overhead of copying the entire data structure.
+As you can see, when passing by reference, the function modifies the original variable directly, and the change is reflected outside the function. On the other hand, when passing by value, the function operates on a copy of the variable, and any changes made inside the function do not affect the original variable outside the function.*/

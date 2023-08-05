@@ -126,4 +126,8 @@ with zeros automatically. That is a[0][2], a[1][2], a[2][2], a[3][2] all are ini
         }
         printf("\n"); /* move to new/next line */
     }
+
+    //Leaving out the subscript reference operator [] in an assignment operator is compile time error.( use 
+  //of a = 5 instead of a[3] = 5 )
+
 }

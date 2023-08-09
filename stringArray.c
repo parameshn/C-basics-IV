@@ -39,4 +39,17 @@ void main()
 
     /*Each character of string occupies 1 byte of memory (on 16 bit computing). The size of character is machine
 dependent, and varies from 16 bit computers to 64 bit computers. */
+
+    /*You can set the initial value of a character array when you declare it by specifying a string literal. If the array
+    is too small for the literal, the literal will be truncated. If the literal (including its null terminator) is smaller
+    than the array, then the final characters in the array will be undefined. If you don’t specify the size of the array,
+    but do specify a literal, then C will set the array to the size of the literal, including the null terminator.
+    */
+
+    char str[4] = {'u', 'n', 'i', 'x'};
+    char str[5] = {'u', 'n', 'i', 'x', '\0'};
+    char str[3];
+    char str[] = "UNIX";
+    char str[4] = "unix";
+    char str[9] = "unix";
 }

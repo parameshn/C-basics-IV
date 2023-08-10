@@ -52,4 +52,22 @@ dependent, and varies from 16 bit computers to 64 bit computers. */
     char str[] = "UNIX";
     char str[4] = "unix";
     char str[9] = "unix";
+
+    /*Reading Strings from Terminal
+
+    We can read string entered by a user at console using two in-built functions such as - scanf() and gets().
+Let's take a look at the two functions one-by-one and see how they are used to read the strings typed at the
+console.*/
+}
+
+/*We can read a string entered by the user using the in-built scanf function. Let's see how it done.
+ Using scanf() function to read a string in C */
+#include <stdio.h>
+int main()
+{
+    char season[20];
+    printf("Enter your favorite season : ");
+    scanf("%s", season);
+    printf("Your favorite season is : %s", season);
+    return 0;
 }

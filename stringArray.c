@@ -53,6 +53,16 @@ dependent, and varies from 16 bit computers to 64 bit computers. */
     char str[4] = "unix";
     char str[9] = "unix";
 
+    /*All of the above declarations are legal. But which ones don’t work? The first one is a valid declaration, but
+will cause major problems because it is not nullterminated. The second example shows a correct nullterminated string. The special escape character \0 denotes string termination. The fifth example suffers the
+size problem, the character array ‘str’ is of size 4 bytes, but it requires an additional space to store ‘\0’. The
+fourth example however does not. This is because the compiler will determine the length of the string and
+automatically initialize the last character to a null-terminator.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+The strings not terminated by a ‘\0’ are merely
+a collection of characters and are called as character arrays.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
     /*Reading Strings from Terminal
 
     We can read string entered by a user at console using two in-built functions such as - scanf() and gets().
@@ -71,3 +81,12 @@ int main()
     printf("Your favorite season is : %s", season);
     return 0;
 }
+/*In C, both declarations `char str[5] = {'u', 'n', 'i', 'x'};` and `char str[5] = {'u', 'n', 'i', 'x', '\0'};` create character arrays (strings) with the same content "unix". However, there is a crucial difference between these two declarations: the null terminator (`'\0'`).
+
+1. `char str[5] = {'u', 'n', 'i', 'x'};`
+   In this declaration, you are initializing a character array with the characters 'u', 'n', 'i', and 'x'. There is no explicit null terminator at the end of the array. While this is a valid array of characters, it is not automatically recognized as a C-style string by string functions that rely on null-terminated strings. If you try to treat `str` as a string and use string functions like `strlen`, `printf`, or `strcpy`, you may encounter unexpected behavior or errors because these functions expect null-terminated strings.
+
+2. `char str[5] = {'u', 'n', 'i', 'x', '\0'};`
+   In this declaration, you are explicitly adding the null terminator (`'\0'`) at the end of the character array. This creates a proper null-terminated C-style string. String functions will work as expected on this array, recognizing it as a valid string and properly terminating when the null character is encountered.
+
+In summary, while both declarations create character arrays with the content "unix," the second declaration with the explicit null terminator is the correct way to define a C-style string that can be safely used with standard string functions. The first declaration lacks the null terminator, which can lead to unexpected behavior when treating it as a string.*/

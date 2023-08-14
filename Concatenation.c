@@ -33,3 +33,21 @@ int main()
 
     return 0;
 }
+
+/*
+ what happens to string 2 does it cease to exist
+
+
+
+
+In the context of the `strcat()` function in C and C++, the `string2` (referred to as the `source` string) does not cease to exist after it is appended to `string1` (referred to as the `destination` string). The `strcat()` function does not modify or destroy the source string in any way.
+
+After the concatenation is performed, both the `destination` and `source` strings remain intact in memory. The `destination` string now contains the concatenated result, and the `source` string remains unchanged.
+
+Here's an analogy to help understand this better:
+
+Imagine you have two pieces of paper with text on them. One paper is labeled `string1`, and the other paper is labeled `string2`. When you use `strcat()` to append the content of `string2` onto `string1`, you're essentially copying the content of `string2` and writing it at the end of `string1`. However, the original `string2` paper remains unaffected; only the `string1` paper is modified.
+
+In memory terms, the `destination` string's memory is altered to include the appended characters from the `source` string, while the `source` string's memory remains unchanged.
+
+It's important to be aware of memory management and potential buffer overflow issues when working with C-style strings. Care should be taken to ensure that the `destination` string has enough allocated memory to accommodate the concatenated result. If not, it could lead to memory corruption and undefined behavior.*/

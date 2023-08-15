@@ -1,4 +1,14 @@
 /// Concatenation:
+//
+//
+// strncat()
+/*strncpy(string1, string2, 4)
+Appends first 4 characters of string2 to string1
+*/
+
+//
+//
+//
 /*The term concatenation refers to the merging of two things together. And this merging of
 two things will together form a new result. In computer programming concatenation also does the same thing.
 It merges two things end to end or we can say that the second thing is added up to the first thing and provides

@@ -24,7 +24,7 @@ main()
     int num;
     float value;
 
-    // defining e an integer pointer variable and a floating-point pointer variable, you simply insert an *
+    // defining an integer pointer variable and a floating-point pointer variable, you simply insert an *
     int *pNum;
     float *pValue;
 

@@ -62,8 +62,21 @@ statements. Notice that you don’t use * to store the address of a variable in 
 you are also defining the pointer at the same time.
 */
 
-    int year;      // Defines a regular integer
-    int *pYear;    // Defines a pointer to an integer
-    year = 1442;   // stores the 1442 to year
-    pYear = &year; // Links up the pointer
+    int year;                      // Defines a regular integer
+    int *pYear;                    // Defines a pointer to an integer
+    year = 1442;                   // stores the 1442 to year
+    pYear = &year;                 // Links up the pointer
+    printf("  %p", (void *)pYear); //// prints the pointer value/contents of the pointer in hexadecimal format.
+    printf(" \n  %d", pYear);      // prints the pointer value/contents of the pointer in decimal format.
+    printf(" \n %d", *pYear);      // prints the value pointed by pYear
+    // 0000002256fff698
+    // 1459615384
+    // 1442
+    /*The first printf statement (%p) prints the memory address of the year variable in hexadecimal format.
+The second printf statement (%d) prints the memory address stored in the pYear pointer in decimal format.
+The third printf statement (%d with *pYear) prints the value stored in the year variable.
+
+Yes, you are correct. Both addresses point to the same variable (year), but their representation is different due to how they are printed and displayed.*/
+
+    printf("\nAddress of pYear: %p", (void *)&pYear); // To get the memory address of the pointer that holds the address of the year variable
 }

@@ -68,10 +68,16 @@ you are also defining the pointer at the same time.
     pYear = &year;                 // Links up the pointer
     printf("  %p", (void *)pYear); //// prints the pointer value/contents of the pointer in hexadecimal format.
     printf(" \n  %d", pYear);      // prints the pointer value/contents of the pointer in decimal format.
-    printf(" \n %d", *pYear);      // prints the value pointed by pYear
-    // 0000002256fff698
-    // 1459615384
-    // 1442
+
+    printf(" \n  %p", pYear);
+    /*Yes, you're correct. You can directly use printf(" \n %p", pYear); instead of printf(" %p", (void *)pYear); in this case. When you're using %p format specifier to print a pointer's value, there's no need to explicitly cast the pointer to (void *).*/
+
+    printf(" \n %d", *pYear); // prints the value pointed by pYear
+                              /*  000000f303fffb20
+                             67107616
+                             000000f303fffb20
+                            1442
+                           */
     /*The first printf statement (%p) prints the memory address of the year variable in hexadecimal format.
 The second printf statement (%d) prints the memory address stored in the pYear pointer in decimal format.
 The third printf statement (%d with *pYear) prints the value stored in the year variable.
@@ -79,4 +85,5 @@ The third printf statement (%d with *pYear) prints the value stored in the year 
 Yes, you are correct. Both addresses point to the same variable (year), but their representation is different due to how they are printed and displayed.*/
 
     printf("\nAddress of pYear: %p", (void *)&pYear); // To get the memory address of the pointer that holds the address of the year variable
+    // Address of pYear: 000000f303fffb18
 }

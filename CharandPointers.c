@@ -8,12 +8,12 @@ void main()
     char *pName = "Andrew B. Mayfair"; /* pName points to A */
 
     printf("name = %s\n", name);
-    printf("name = %c\n", *pName);
+    printf("name = %c\n", *(pName + 1));
     printf("name = %s\n", pName);
 
     pName = "Theodore M. Brooks";
     printf("name = %s\n", name);
-    printf("name = %c\n", *pName);
+    printf("name = %c\n", *(pName));
     printf("name = %s\n", pName);
 
     char *pNum = "12345652";
@@ -21,7 +21,7 @@ void main()
     printf("num = %p\n", (void *)pNum);
 
     /*name = Andrew B. Mayfair
-name = A
+name = n
 name = Andrew B. Mayfair
 name = Andrew B. Mayfair
 name = T

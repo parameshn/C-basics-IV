@@ -38,7 +38,7 @@ printf() lines*/
 
     // does exactly the same as this set:
     printf("The first array value is %d.\n", *(vals + 0));
-    printf("The second array value is %d.\n", *(vals + 1));
+    printf("The second array value is %d.\n", *(vals + 1)); // C adds one int size when you add 1 to an int pointer
     printf("The third array value is %d.\n", *(vals + 2));
     printf("The fourth array value is %d.\n", *(vals + 3));
     printf("The fifth array value is %d.\n", *(vals + 4));

@@ -87,3 +87,31 @@ Yes, you are correct. Both addresses point to the same variable (year), but thei
     printf("\nAddress of pYear: %p", (void *)&pYear); // To get the memory address of the pointer that holds the address of the year variable
     // Address of pYear: 000000f303fffb18
 }
+
+/*
+////the use of address of operator
+
+
+That's correct. In C, the "address of" operator, represented by the ampersand symbol `&`, can be used with array elements but not with array names. Here's why:
+
+1. **Address of Array Elements**: You can use the address of operator to get the memory address of individual elements within an array. For example:
+
+```c
+int arr[5] = {1, 2, 3, 4, 5};
+int *ptr = &arr[2]; // Get the address of the third element
+```
+
+In this case, `&arr[2]` gives you the memory address where the third element of the array is stored.
+
+2. **Array Names as Pointers**: In C, the name of an array can also act as a pointer to its first element. When you use the array name without an index, it is automatically treated as a pointer to the first element of the array. This is why you don't need to use the address of operator with array names to get their addresses.
+
+For example:
+
+```c
+int arr[5] = {1, 2, 3, 4, 5};
+int *ptr = arr; // The array name "arr" is automatically treated as a pointer to its first element
+```
+
+Using the address of operator with the array name in this context would be redundant and unnecessary.
+
+So, to summarize, you can use the address of operator with individual array elements to obtain their memory addresses, but when dealing with the array name itself, you don't need the address of operator because the array name is already treated as a pointer to the first element.*/

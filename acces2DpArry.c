@@ -48,12 +48,11 @@ void main()
     int i = 4; // Row index
     int j = 3; // Column index
 
-    int element = *(p + 6 * i + j); // Access a[2][4]
+    int element = *(p + 6 * i + j); // Access a[4][3]  a[4][3] = 54   *( p + 6 * 4 +3) = *(p + 27) = 54
 
     printf("a[%d][%d] = %d\n", i, j, element); // This will print "a[2][4] = 35"
 
-     element = *(p + i + 5 * j); // Access a[2][4]
+    element = *(p + i + 5 * j); // Access a[2]4[]
 
     printf("a[%d][%d] = %d\n", i, j, element);
 }
-
